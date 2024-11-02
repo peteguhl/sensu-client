@@ -23,11 +23,10 @@ jobs:
     - name: Restore dependencies
       run: nuget restore
     - name: Build
-      run: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2019\Enterprise\MSBuild\Current\bin\msbuild.exe /p:RestorePackages=false sensu-client.sln
+      run: C:\"Program Files (x86)"\"Microsoft Visual Studio"\2019\Enterprise\MSBuild\Current\bin\msbuild.exe /p:deployonbuild=true /p:RestorePackages=false sensu-client.sln
 #    - name: Build
 #      run: dotnet build --no-restore
 #    - name: Test
 #      run: dotnet test --no-build --verbosity normal
-    - name: Publish
-      run: dotnet publish -c Release -o ../dotnet-webapp --self-contained true /p:UseAppHost=true
+
 
