@@ -23,6 +23,8 @@ jobs:
     - name: Restore dependencies
       run: nuget restore
     - name: Build
-      run: dotnet build --no-restore
+      run: msbuild --no-restore sensu-client.sln
+#    - name: Build
+#      run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
