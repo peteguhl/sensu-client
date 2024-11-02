@@ -32,4 +32,4 @@ jobs:
     - uses: actions/upload-artifact@v4
       with:
         name: sensu-client-artifact
-        path: sensu-client/**/bin/Debug/*
+        path: .\**/bin/Debug/*
